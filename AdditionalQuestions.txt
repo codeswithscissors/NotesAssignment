@@ -1,0 +1,14 @@
+Additional Questions
+
+-How well does your note-searching-api scale or not scale? How would you make your search more efficient?
+
+This is not a scalable application. To maintain simplicity, the list of notes is stored in a map in memory. As the number of notes increases, this will become an issue. Utilizing a backend database to store the notes would allow the application to scale as well as increase search efficiency.
+
+-How would you add security to your API?
+By enabling HTTPS and utilizing some sort of authorization token. The token would need to be present and verified before the API would provide a response.
+
+-What features should we add to this API next?
+The aforementioned security would be a good first step. Also the ability to modify and delete notes once they are created. It may also be nice to sort the notes by some (as yet non-present) parameter, perhaps a due-date type of approach.
+
+-How would you test the API?
+The simplicity of this API would allow for basic JUnit testing using a mock implementation of the service provided with dummy data.
